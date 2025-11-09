@@ -1,0 +1,14 @@
+{
+  "name": "DocumentRequest",
+  "type": "object",
+  "properties": {
+    "request_id": { "type": "string", "description": "Unique request ID" },
+    "student_id": { "type": "string", "description": "Student for whom document is requested" },
+    "document_type": { "type": "string", "enum": ["admission","marksheet","id_proof","other"], "description": "Type of document requested" },
+    "requested_by": { "type": "string", "enum": ["student","college","admin"], "description": "Who requested the document" },
+    "request_date": { "type": "string", "format": "date", "description": "Date of request" },
+    "status": { "type": "string", "enum": ["pending","approved","rejected"], "default": "pending" },
+    "notes": { "type": "string", "description": "Additional notes for request" }
+  },
+  "required": ["student_id","document_type","requested_by"]
+}

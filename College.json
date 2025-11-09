@@ -1,0 +1,16 @@
+{
+  "name": "College",
+  "type": "object",
+  "properties": {
+    "college_name": { "type": "string", "description": "Name of the college" },
+    "college_id": { "type": "string", "description": "Unique college ID" },
+    "address": { "type": "string", "description": "College address" },
+    "phone": { "type": "string", "description": "College contact number" },
+    "email": { "type": "string", "format": "email", "description": "College email address" },
+    "website": { "type": "string", "format": "uri", "description": "College website URL" },
+    "established_year": { "type": "string", "description": "Year college was established" },
+    "courses_offered": { "type": "array", "items": { "type": "string" }, "description": "List of courses offered" },
+    "notes": { "type": "string", "description": "Additional notes" }
+  },
+  "required": ["college_name","college_id"]
+}

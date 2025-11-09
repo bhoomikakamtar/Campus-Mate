@@ -1,0 +1,16 @@
+{
+  "name": "Documents",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "document_name": { "type": "string", "description": "Name of the document" },
+      "document_type": { "type": "string", "enum": ["admission","marksheet","id_proof","other"], "description": "Type of document" },
+      "uploaded_by": { "type": "string", "enum": ["student","college"], "description": "Who uploaded the document" },
+      "upload_date": { "type": "string", "format": "date", "description": "Date of upload" },
+      "status": { "type": "string", "enum": ["pending","approved","rejected"], "default": "pending" },
+      "notes": { "type": "string", "description": "Additional notes" }
+    },
+    "required": ["document_name","document_type","uploaded_by"]
+  }
+}
